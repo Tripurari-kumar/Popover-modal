@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- selector which points to the modal which we want to open  data-modal-target-->
+    <button data-modal-target="#modal">Open Modal</button>
+    <div id="modal" class="modal">
+      <div class="modal_header">
+        <div class="modal_heading">
+          Example Modal
+        </div>
+        <div data-close-button class="close_btn">
+          X
+        </div>
+      </div>
+      <div class="modal_body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptatum
+        odit ducimus praesentium magnam saepe aperiam, architecto qui esse optio
+        soluta in? Laudantium ad officia magnam aut iure ducimus reiciendis
+        recusandae, cum veritatis natus impedit id voluptate totam modi
+        asperiores vitae facere accusamus consectetur? Distinctio vero
+        consequatur ipsum. Sit, ab.
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="./index.mjs" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* scale property to completely disappear the modal */
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  /* standout over of the overlay gray that's why white */
+  background-color: #fff;
+  width: 400px;
+  max-width: 80%;
+}
+.modal.active {
+  /* Reason for using scale here is so that
+   we can trainsion smoothing 
+   in browser with animation transition: 200ms ease-in-out;*/
+  /* toggle on the modal by scale on with active class */
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+.modal_header .close_btn {
+  cursor: pointer;
+  font-weight: bold;
+}
+.modal_body {
+  padding: 10px 20px;
+}
+
+#overlay {
+  /* follow us around everywhwre we go on screen */
+  position: fixed;
+  /* by default overlay should not show that's why opacity =0 */
+
+  opacity: 0;
+
+  /* to make the overlay fit the entire screen need to make top, bottom, left, right as zero */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 200ms ease-in-out;
+  /* making background black 0 0 0  50% */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* when overlay is not active we need to click on open modal btn */
+  pointer-events: none;
+}
+
+#overlay.active {
+  /* toggle and untoggle overlay */
+  /* when overlay is active all actions can be performed on click  */
+  pointer-events: all;
+  opacity: 1;
+}
