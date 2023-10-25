@@ -32,6 +32,7 @@ function closeModal(modal){
 
 openmodalsButtons.forEach((openButton)=>{
   openButton.addEventListener('click',()=>{
+   // dataset.modalTarget = data-modal-target    modal-target is written as modalTarget on camelCase and access from dataset prperty
     const modal= document.querySelector(openButton.dataset.modalTarget);
     console.log(openButton);
      openModal(modal);
